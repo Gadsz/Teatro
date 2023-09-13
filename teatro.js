@@ -7,6 +7,8 @@ const POLTRONAS = 240; //quantidade de poltronas
 const reservadas =[]; //vetor com as poltronas reservadas
 
 window.addEventListener("load", () => {
+    const ocupadas = localStorage.getItem("teatroOcupadas") ? localStorage.getItem("teatroOcupadas").split(";") : [];
+
     for (let i = 1; 1 <= POLTRONAS; i++) {
         const figure = document.createElement("figure");
         const imgStatus = document.createElement("img");
